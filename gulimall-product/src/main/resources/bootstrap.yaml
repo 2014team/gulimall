@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: gulimall-product
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.34.150:8848
+        file-extension: yaml
+        namespace: c0975744-9d26-43e2-8a14-4738f3402353
+        # group: dev  # 默认是 DEFAULT_GROUP，取消注释可修改
+        extension-configs:
+          - data-id: datasource.yaml
+            group: DEFAULT_GROUP
+            refresh: true
+          - data-id: mybatis.yaml
+            group: DEFAULT_GROUP
+            refresh: true
+          - data-id: nacos.yaml
+            group: DEFAULT_GROUP
+            refresh: true
+server:
+  port: 8060

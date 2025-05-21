@@ -1,0 +1,44 @@
+#spring:
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 192.168.34.150:8848  # Nacos 服务地址
+#        namespace: public            # 命名空间（可选）
+#        group: DEFAULT_GROUP          # 分组（默认 DEFAULT_GROUP）
+##      config:
+##        server-addr: 192.168.34.150:8848  # 配置中心地址
+##        file-extension: yaml         # 配置文件格式
+#  config:
+#    import: optional:nacos:${spring.application.name} # 关键配置
+#
+#  datasource:
+#    url: jdbc:mysql://192.168.34.150:3306/gulimall_sms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+#    username: root
+#    password: root
+#    driver-class-name: com.mysql.cj.jdbc.Driver  # 注意 MySQL 8+ 使用此驱动
+#    hikari:
+#      maximum-pool-size: 10  # 连接池大小，根据需要调整
+#      minimum-idle: 5        # 最小空闲连接数
+#      idle-timeout: 600000   # 空闲连接最大空闲时间（毫秒）
+#      connection-timeout: 30000  # 连接超时时间（毫秒）
+#      validation-timeout: 3000  # 验证连接是否有效的超时时间
+#
+#
+#mybatis-plus:
+#  # MyBatis Plus 配置
+#  global-config:
+#    db-config:
+#      id-type: auto  # 自动生成主键（根据数据库策略）
+#  mapper-locations: classpath:mapper/**/*.xml  # 扫描 Mapper XML 文件的位置
+#
+#  # 如果你使用了分页插件
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # 输出SQL日志，方便调试
+#server:
+#  port: 8080
+##debug: true
+#
+#coupon:
+#  user:
+#    name: zhangsan
+#    age: 9

@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: gulimall-coupon
+
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.34.150:8848
+        file-extension: yaml
+        namespace: 13f03abb-f4f4-4846-b525-827f5c45a4d7
+        # group: dev  # 默认是 DEFAULT_GROUP，取消注释可修改
+        extension-configs:
+          - data-id: datasource.yaml
+            group: dev
+            refresh: true
+          - data-id: mybatis.yaml
+            group: dev
+            refresh: true
+          - data-id: nacos.yaml
+            group: dev
+            refresh: true
+          - data-id: other.yaml
+            group: dev
+            refresh: true
